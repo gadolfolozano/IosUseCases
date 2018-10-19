@@ -1,0 +1,6 @@
+framework module Pods_IosUseCases {
+  umbrella header "Pods-IosUseCases-umbrella.h"
+
+  export *
+  module * { export * }
+}
