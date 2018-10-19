@@ -12,12 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("viewDidAppear")
-        performSegue(withIdentifier: "loginSegue", sender: nil)    }
+        performSegue(withIdentifier: "loginSegue", sender: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -25,6 +26,47 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onLoginBtnClicked(_ sender: Any) {
+        
+        let username = txtUsername.text
+        let password = txtPassword.text
+        
+        if(validateInputs()){
+            Auth.auth().signIn(withEmail: username!, password: password!) { (user, error) in
+                if(error != nil){
+                    self.showLoginError()
+                } else {
+                    self.handleLoginSuccess(user: user!)
+                }
+            }
+        } else {
+            showInvalidInputsAlert()
+        }
+    }
+    
+    func handleLoginSuccess(user : User){
+        performSegue(withIdentifier: "mainSegue", sender: nil)
+    }
+    
+    func showLoginError() {
+        showAlert(title: "Login Error", message: "An error ocurred")
+    }
+    
+    func showInvalidInputsAlert() {
+        showAlert(title: "Invalid Inputs", message: "Please check your inputs")
+    }
+    
+    func showAlert(title : String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func validateInputs() -> Bool{
+        let username = txtUsername.text
+        let password = txtPassword.text
+        
+        return username!.count >= 6 && password!.count >= 6
     }
     
     @IBAction func onRegisterBtnClicked(_ sender: Any) {

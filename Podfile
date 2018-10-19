@@ -7,5 +7,6 @@ target 'IosUseCases' do
 
   # Pods for IosUseCases
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
 end
