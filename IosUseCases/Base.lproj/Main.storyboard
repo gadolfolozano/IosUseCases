@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,7 +44,7 @@
         <!--Login View Controller-->
         <scene sceneID="XEu-uR-Dra">
             <objects>
-                <viewController id="cCL-wA-Rfy" customClass="LoginViewController" customModule="IosUseCases" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginStoryBoard" id="cCL-wA-Rfy" customClass="LoginViewController" customModule="IosUseCases" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VQc-dn-uzp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="829.60000000000002" y="33.733133433283363"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="TLm-Eb-7Jl">
             <objects>
-                <viewController id="4Uf-za-F7U" sceneMemberID="viewController">
+                <viewController id="4Uf-za-F7U" customClass="MainViewController" customModule="IosUseCases" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pYz-z1-NUZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +180,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LJL-Xn-OTd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fET-hf-Z17"/>
+                    <navigationItem key="navigationItem" id="fET-hf-Z17">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="pqW-pg-dMg">
+                            <connections>
+                                <action selector="onLogoutClicked:" destination="4Uf-za-F7U" id="ehp-2g-9qm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lp0-3K-6NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    var spinnerView : UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +33,9 @@ class LoginViewController: UIViewController {
         let password = txtPassword.text
         
         if(validateInputs()){
+            spinnerView = UIViewController.displaySpinner(onView: self.view)
             Auth.auth().signIn(withEmail: username!, password: password!) { (user, error) in
+                UIViewController.removeSpinner(spinner: self.spinnerView!)
                 if(error != nil){
                     self.showLoginError()
                 } else {
