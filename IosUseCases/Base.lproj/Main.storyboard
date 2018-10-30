@@ -61,11 +61,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-xL-ptc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-xL-ptc">
                                 <rect key="frame" x="90" y="254" width="195" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gri-8O-jUf">
                                 <rect key="frame" x="168" y="312" width="38" height="30"/>
@@ -126,15 +126,57 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUv-Gy-BFa">
+                                <rect key="frame" x="90" y="199" width="195" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QNh-SZ-zsd">
+                                <rect key="frame" x="90" y="254" width="195" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pfa-Jr-Uii">
+                                <rect key="frame" x="90" y="296" width="195.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Um-F2-9jR">
+                                <rect key="frame" x="146.5" y="351" width="82" height="30"/>
+                                <state key="normal" title="Register me"/>
+                                <connections>
+                                    <action selector="onRegisterBtnClicked:" destination="cCL-wA-Rfy" eventType="touchUpInside" id="Isg-n0-Uvm"/>
+                                    <action selector="onRegisterClicked:" destination="1Bk-o2-0KB" eventType="touchUpInside" id="V36-xr-TS6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pfa-Jr-Uii" firstAttribute="centerX" secondItem="Cgn-Kt-CxD" secondAttribute="centerX" id="15u-gj-leg"/>
                             <constraint firstItem="dbC-jS-qmn" firstAttribute="top" secondItem="Dv8-dF-nAf" secondAttribute="top" constant="72" id="5p4-sO-CmA"/>
+                            <constraint firstItem="zUv-Gy-BFa" firstAttribute="top" secondItem="dbC-jS-qmn" secondAttribute="bottom" constant="42" id="A2T-Or-cB8"/>
+                            <constraint firstItem="zUv-Gy-BFa" firstAttribute="leading" secondItem="Dv8-dF-nAf" secondAttribute="leading" constant="90" id="DRE-w6-iTK"/>
+                            <constraint firstItem="2Um-F2-9jR" firstAttribute="centerX" secondItem="Cgn-Kt-CxD" secondAttribute="centerX" id="G82-xg-3uF"/>
+                            <constraint firstItem="zUv-Gy-BFa" firstAttribute="centerX" secondItem="Cgn-Kt-CxD" secondAttribute="centerX" id="JVh-cS-2Ci"/>
+                            <constraint firstItem="pfa-Jr-Uii" firstAttribute="top" secondItem="QNh-SZ-zsd" secondAttribute="bottom" constant="12" id="KsN-cl-ehX"/>
+                            <constraint firstItem="QNh-SZ-zsd" firstAttribute="top" secondItem="zUv-Gy-BFa" secondAttribute="bottom" constant="25" id="Qhw-4a-3Rb"/>
+                            <constraint firstItem="QNh-SZ-zsd" firstAttribute="leading" secondItem="Dv8-dF-nAf" secondAttribute="leading" constant="90" id="Vx1-y9-V8k"/>
+                            <constraint firstItem="2Um-F2-9jR" firstAttribute="top" secondItem="pfa-Jr-Uii" secondAttribute="bottom" constant="25" id="c8n-yQ-pRE"/>
                             <constraint firstItem="dbC-jS-qmn" firstAttribute="leading" secondItem="Dv8-dF-nAf" secondAttribute="leading" constant="24" id="fRk-eL-J4f"/>
+                            <constraint firstItem="pfa-Jr-Uii" firstAttribute="leading" secondItem="Dv8-dF-nAf" secondAttribute="leading" constant="90" id="rea-Gd-RgP"/>
+                            <constraint firstItem="QNh-SZ-zsd" firstAttribute="centerX" secondItem="Cgn-Kt-CxD" secondAttribute="centerX" id="uxK-Vp-nJ1"/>
                             <constraint firstItem="Dv8-dF-nAf" firstAttribute="trailing" secondItem="dbC-jS-qmn" secondAttribute="trailing" constant="24" id="xFW-2a-n6y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dv8-dF-nAf"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTxt" destination="QNh-SZ-zsd" id="1Nf-Zm-PC4"/>
+                        <outlet property="rePasswordTxt" destination="pfa-Jr-Uii" id="eo5-2k-i8n"/>
+                        <outlet property="usernameTxt" destination="zUv-Gy-BFa" id="Bkd-4L-8Rg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgw-kG-uIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

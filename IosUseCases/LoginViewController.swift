@@ -9,12 +9,10 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    
-    var spinnerView : UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +31,9 @@ class LoginViewController: UIViewController {
         let password = txtPassword.text
         
         if(validateInputs()){
-            spinnerView = UIViewController.displaySpinner(onView: self.view)
+            self.showLoading()
             Auth.auth().signIn(withEmail: username!, password: password!) { (user, error) in
-                UIViewController.removeSpinner(spinner: self.spinnerView!)
+                self.dismissLoading()
                 if(error != nil){
                     self.showLoginError()
                 } else {
@@ -52,18 +50,11 @@ class LoginViewController: UIViewController {
     }
     
     func showLoginError() {
-        showAlert(title: "Login Error", message: "An error ocurred")
+        self.showAlert(title: "Login Error", message: "An error ocurred")
     }
     
     func showInvalidInputsAlert() {
-        showAlert(title: "Invalid Inputs", message: "Please check your inputs")
-    }
-    
-    func showAlert(title : String, message: String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        
-        self.present(alert, animated: true)
+        self.showAlert(title: "Invalid Inputs", message: "Please check your inputs")
     }
     
     func validateInputs() -> Bool{

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A824CBA217A8C3E00F41F31 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A824CB9217A8C3E00F41F31 /* MainViewController.swift */; };
+		91500C662182CA62001DF7B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91500C652182CA61001DF7B5 /* BaseViewController.swift */; };
 		9158666E2179965F000E0199 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9158666D2179965F000E0199 /* GoogleService-Info.plist */; };
 		915F12B021758F3A00C41644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F12AF21758F3A00C41644 /* AppDelegate.swift */; };
 		915F12B221758F3A00C41644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F12B121758F3A00C41644 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		1A824CB9217A8C3E00F41F31 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		233DB28CDCDAB2047903C16D /* Pods_IosUseCases.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosUseCases.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC24909AA7B224AAEFD9C1A /* Pods-IosUseCases.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosUseCases.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosUseCases/Pods-IosUseCases.debug.xcconfig"; sourceTree = "<group>"; };
+		91500C652182CA61001DF7B5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9158666D2179965F000E0199 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		915F12AC21758F3A00C41644 /* IosUseCases.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosUseCases.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		915F12AF21758F3A00C41644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				915F12BE21758F3C00C41644 /* Info.plist */,
 				9158666D2179965F000E0199 /* GoogleService-Info.plist */,
 				915F12B621758F3A00C41644 /* IosUseCases.xcdatamodeld */,
+				91500C652182CA61001DF7B5 /* BaseViewController.swift */,
 			);
 			path = IosUseCases;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				915F12B221758F3A00C41644 /* ViewController.swift in Sources */,
 				1A824CBA217A8C3E00F41F31 /* MainViewController.swift in Sources */,
 				915F12B821758F3A00C41644 /* IosUseCases.xcdatamodeld in Sources */,
+				91500C662182CA62001DF7B5 /* BaseViewController.swift in Sources */,
 				915F12B021758F3A00C41644 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
